@@ -1,13 +1,19 @@
+import { useState } from "react";
+import ContactForm from "./components/ContactForm";
+import ContactList from "./components/ContactList";
+
 function App() {
+  const [refresh, setRefresh] = useState(false);
+
+  const handleRefresh = () => {
+    setRefresh(!refresh);
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="p-8 rounded-xl bg-white shadow-lg">
-        <h1 className="text-3xl font-bold text-blue-600 text-center">
-          Tailwind is working ✅
-        </h1>
-        <p className="mt-4 text-gray-600 text-center">
-          Manual setup successful on Windows
-        </p>
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4">
+      <div className="max-w-6xl mx-auto space-y-12">
+        <ContactForm onSuccess={handleRefresh} />
+        <ContactList refresh={refresh} />
       </div>
     </div>
   );
