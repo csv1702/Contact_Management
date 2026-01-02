@@ -55,7 +55,10 @@ function ContactForm({ onSuccess }) {
     try {
       setIsSubmitting(true);
 
-      await axios.post("http://localhost:5000/api/contacts", formData);
+      await axios.post(
+        `${import.meta.env.VITE_API_BASE_URL}/api/contacts`,
+        formData
+      );
 
       setSuccessMessage("Your message has been sent successfully!");
       onSuccess();

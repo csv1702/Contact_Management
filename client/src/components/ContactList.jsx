@@ -8,7 +8,9 @@ function ContactList({ refresh }) {
   // Fetch all contacts
   const fetchContacts = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/contacts");
+      const response = await axios.get(
+        `${import.meta.env.VITE_API_BASE_URL}/api/contacts`
+      );
       setContacts(response.data);
     } catch (error) {
       console.error("Failed to fetch contacts");
@@ -31,7 +33,10 @@ function ContactList({ refresh }) {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/contacts/${id}`);
+      await axios.delete(
+        `${import.meta.env.VITE_API_BASE_URL}/api/contacts/${id}`
+      );
+
       fetchContacts(); // refresh list after delete
     } catch (error) {
       alert("Failed to delete contact");
