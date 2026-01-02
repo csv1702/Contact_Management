@@ -13,24 +13,13 @@ const app = express();
 
 app.use(
   cors({
-    origin: function (origin, callback) {
-      if (
-        !origin ||
-        origin.includes("vercel.app") ||
-        origin.includes("localhost")
-      ) {
-        callback(null, true);
-      } else {
-        callback(null, false);
-      }
-    },
+    origin: true, // reflect request origin
     methods: ["GET", "POST", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type"],
   })
 );
 
 app.options("*", cors());
-
 app.use(express.json());
 
 // Routes
