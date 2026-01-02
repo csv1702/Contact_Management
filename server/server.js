@@ -11,24 +11,25 @@ const app = express();
 
 // Middleware
 
-const allowedOrigins = [
-  "http://localhost:5173",
-  "https://contact-management-m7ptw34uk-csv1702s-projects.vercel.app",
-];
-
 app.use(
   cors({
     origin: function (origin, callback) {
-      if (!origin || allowedOrigins.includes(origin)) {
+      if (
+        !origin ||
+        origin.includes("vercel.app") ||
+        origin.includes("localhost")
+      ) {
         callback(null, true);
       } else {
-        callback(new Error("Not allowed by CORS"));
+        callback(null, false);
       }
     },
-    methods: ["GET", "POST", "DELETE"],
+    methods: ["GET", "POST", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type"],
   })
 );
+
+app.options("*", cors());
 
 app.use(express.json());
 
