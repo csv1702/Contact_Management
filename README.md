@@ -2,7 +2,7 @@
 
 A full-stack web application for managing contacts with a modern, responsive UI and a robust backend API. Built with React, Express.js, and MongoDB.
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Live Demo](#live-demo)
 - [Overview](#overview)
@@ -16,18 +16,18 @@ A full-stack web application for managing contacts with a modern, responsive UI 
 - [API Endpoints](#api-endpoints)
 - [Database Schema](#database-schema)
 
-## 🌐 Live Demo
+## Live Demo
 
 Experience the application live at:
 
 - **Frontend:** [https://contact-management-pjvoy07n1-csv1702s-projects.vercel.app/](https://contact-management-pjvoy07n1-csv1702s-projects.vercel.app/)
 - **Backend API:** [https://contact-management-backend-u5zw.onrender.com](https://contact-management-backend-u5zw.onrender.com)
 
-## 📱 Overview
+## Overview
 
 Contact Management Application is a modern web application that allows users to create, view, and delete contacts. The application features a clean, intuitive interface built with React and Tailwind CSS on the frontend, with a powerful Express.js backend connected to MongoDB for data persistence.
 
-## ✨ Features
+## Features
 
 - **Create Contacts**: Add new contacts with name, email, phone, and optional message
 - **View All Contacts**: Display all saved contacts in a responsive list format
@@ -35,7 +35,7 @@ Contact Management Application is a modern web application that allows users to 
 - **Real-time Updates**: Automatic UI refresh after contact operations
 - **Input Validation**: Server-side validation for required fields
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 
@@ -56,41 +56,41 @@ Contact Management Application is a modern web application that allows users to 
 
 - **MongoDB** - NoSQL database
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 contact-management-app/
-│
-├── client/                          # React frontend
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── ContactForm.jsx     # Form to add new contacts
-│   │   │   └── ContactList.jsx     # Display all contacts
-│   │   ├── App.jsx                 # Main application component
-│   │   ├── index.css               # Global styles
-│   │   └── main.jsx                # Entry point
-│   ├── public/                      # Static assets
-│   ├── .env                         # Client environment variables
-│   ├── package.json                # Frontend dependencies
-│   ├── vite.config.js              # Vite configuration
-│   ├── tailwind.config.js          # Tailwind CSS configuration
-│   ├── postcss.config.js           # PostCSS configuration
-│   └── README.md                   # Frontend documentation
-│
-├── server/                          # Express backend
-│   ├── models/
-│   │   └── Contact.js              # Contact data model
-│   ├── routes/
-│   │   └── contactRoutes.js        # API routes
-│   ├── .env                         # Server environment variables
-│   ├── server.js                    # Server entry point
-│   └── package.json                # Backend dependencies
-│
-├── .gitignore                       # Git ignore rules
-└── README.md
+�
++-- client/                          # React frontend
+�   +-- src/
+�   �   +-- components/
+�   �   �   +-- ContactForm.jsx     # Form to add new contacts
+�   �   �   +-- ContactList.jsx     # Display all contacts
+�   �   +-- App.jsx                 # Main application component
+�   �   +-- index.css               # Global styles
+�   �   +-- main.jsx                # Entry point
+�   +-- public/                      # Static assets
+�   +-- .env                         # Client environment variables
+�   +-- package.json                # Frontend dependencies
+�   +-- vite.config.js              # Vite configuration
+�   +-- tailwind.config.js          # Tailwind CSS configuration
+�   +-- postcss.config.js           # PostCSS configuration
+�   +-- README.md                   # Frontend documentation
+�
++-- server/                          # Express backend
+�   +-- models/
+�   �   +-- Contact.js              # Contact data model
+�   +-- routes/
+�   �   +-- contactRoutes.js        # API routes
+�   +-- .env                         # Server environment variables
+�   +-- server.js                    # Server entry point
+�   +-- package.json                # Backend dependencies
+�
++-- .gitignore                       # Git ignore rules
++-- README.md
 ```
 
-## 📋 Prerequisites
+## Prerequisites
 
 Before you begin, ensure you have the following installed:
 
@@ -101,7 +101,7 @@ Before you begin, ensure you have the following installed:
   - For local: [MongoDB Community Edition](https://www.mongodb.com/try/download/community)
 - **Git** (optional) - for cloning the repository
 
-## 🚀 Installation
+## Installation
 
 ### Step 1: Clone the Repository
 
@@ -124,7 +124,7 @@ cd ../client
 npm install
 ```
 
-## ⚙️ Configuration
+## Configuration
 
 ### Backend Configuration
 
@@ -157,7 +157,7 @@ VITE_API_BASE_URL=http://localhost:5000/api
 
 **Note:** By default, the frontend will connect to `http://localhost:5000`. You can adjust the port if your backend runs on a different port.
 
-## ▶️ Running the Application
+## Running the Application
 
 ### Start the Backend Server
 
@@ -173,7 +173,7 @@ The backend will run on `http://localhost:5000`
 You should see:
 
 ```
-MongoDB connected successfully ✅
+MongoDB connected successfully
 Server running on http://localhost:5000
 ```
 
@@ -188,9 +188,9 @@ npm run dev
 
 The frontend will typically run on `http://localhost:5173`
 
-Visit the application in your browser to start managing contacts!
+Visit the application in your browser to start managing contacts.
 
-## 📡 API Endpoints
+## API Endpoints
 
 ### Base URL
 
@@ -289,7 +289,7 @@ http://localhost:5000/api
 }
 ```
 
-## 🗄️ Database Schema
+## Database Schema
 
 ### Contact Model
 
@@ -332,7 +332,7 @@ http://localhost:5000/api
 
 **Index:** Automatically sorted by `createdAt` in descending order (newest first)
 
-## 📧 Contact & Support
+## Contact and Support
 
 For questions or support, please open an issue on the repository.
 
@@ -341,4 +341,4 @@ Developed By-
 
 ---
 
-**Happy Contact Managing! 🎉**
+**Happy Contact Managing!**
